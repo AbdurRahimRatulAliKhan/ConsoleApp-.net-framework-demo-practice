@@ -10,21 +10,10 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            ////Console.WriteLine("Welcome to C#.NET");
-            ////Console.ReadKey();
-            //Console.WriteLine("hello");
-            //Console.Write("hi ");
-            //Console.Write("bye ");
-            //Console.WriteLine("welcome");
-            //Console.Write(".NET ");
-            //Console.ReadKey();
-
-            string name = "Prerona Arif";
-            Console.WriteLine(name);
-            Console.WriteLine("Hi" + name);
-            Console.WriteLine($"Hello {name}");
+            Console.WriteLine("Enter the name: ");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hi{name}");
             Console.ReadKey();
-            
         }
     }
 }
