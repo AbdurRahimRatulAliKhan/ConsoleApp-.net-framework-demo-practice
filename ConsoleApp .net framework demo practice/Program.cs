@@ -10,13 +10,15 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter two integer: ");
-            int number1 = Convert.ToInt32(Console.ReadLine());
-            int number2 = Convert.ToInt32(Console.ReadLine());
-
-            int result = number1 + number2;
-            Console.WriteLine("sum: " + result);
-            Console.WriteLine($"Sum = {number1 + number2}");
+            Console.WriteLine("Enter a key: ");
+            int var1 = Console.Read();
+            Console.WriteLine("ASCII value of the entered key is: " + var1);
+            
+            Console.WriteLine("Enter another key: ");
+            ConsoleKeyInfo var2 = Console.ReadKey();
+            Console.WriteLine($"\nEntered key: {var2.Key} " +
+                $"KeyChar: {var2.KeyChar} " +
+                $"ASCII: {(int)var2.KeyChar}");
             Console.ReadKey();
         }
     }
