@@ -10,12 +10,9 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            char ch = 'B';
-            Console.WriteLine($"Char value: {ch} " +
-                $"Equivalent number: {(byte)ch} " +
-                $"char min value {(int)char.MinValue} " +
-                $"and char max value {(int)char.MaxValue} " +
-                $"char size {sizeof(char)}");
+            string value = "ABC";
+            var howmanybytes = value.Length * sizeof(char);
+            Console.WriteLine($"{value} {howmanybytes}");
             Console.ReadKey();
         }
     }
