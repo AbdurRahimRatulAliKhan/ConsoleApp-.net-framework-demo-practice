@@ -10,19 +10,12 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            byte b1 = 66;
-            Console.WriteLine($"Decimal: {b1}");
-            Console.WriteLine("ASCII value: " + (char)b1);
-            Console.WriteLine($"Byte min value: {sbyte.MinValue} Byte Max value {sbyte.MaxValue}");
-            Console.WriteLine(sizeof(sbyte));
-
-            sbyte sb1 = 66;
-            sbyte sb2 = -100;
-            Console.WriteLine($"Decimal: {sb1}");
-            Console.WriteLine("ASCII value: " + (char)sb1);
-            Console.WriteLine("ASCII value: " + (char)sb2);
-            Console.WriteLine($"Byte min value: {sbyte.MinValue} Byte Max value {sbyte.MaxValue}"); 
-            Console.WriteLine(sizeof(sbyte));
+            char ch = 'B';
+            Console.WriteLine($"Char value: {ch} " +
+                $"Equivalent number: {(byte)ch} " +
+                $"char min value {(int)char.MinValue} " +
+                $"and char max value {(int)char.MaxValue} " +
+                $"char size {sizeof(char)}");
             Console.ReadKey();
         }
     }
