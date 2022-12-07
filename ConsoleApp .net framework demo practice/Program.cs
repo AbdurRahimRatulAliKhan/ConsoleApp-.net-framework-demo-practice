@@ -10,27 +10,19 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            //Ask the user to Enter Student Details
-            Console.WriteLine("Enter Student Details");
-            Console.WriteLine("Enter Registration Number");
-            int RegdNumber = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter Name");
-            string Name = Console.ReadLine();
-            Console.WriteLine("Enter Marks of three Subjects:");
-            Console.WriteLine("Subject1");
-            int Mark1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Subject2");
-            int Mark2 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Subject3");
-            int Mark3 = Convert.ToInt32(Console.ReadLine());
-            int TotalMarks = Mark1 + Mark2 + Mark3;
-            int AverageMark = TotalMarks / 3;
-            //Display the Student Details
-            Console.WriteLine("\nStudent Details are as Follows:");
-            Console.WriteLine($"Registration Number: {RegdNumber}");
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"Total Marks : {TotalMarks}");
-            Console.WriteLine($"Average Mark: {AverageMark}");
+            byte b1 = 66;
+            Console.WriteLine($"Decimal: {b1}");
+            Console.WriteLine("ASCII value: " + (char)b1);
+            Console.WriteLine($"Byte min value: {sbyte.MinValue} Byte Max value {sbyte.MaxValue}");
+            Console.WriteLine(sizeof(sbyte));
+
+            sbyte sb1 = 66;
+            sbyte sb2 = -100;
+            Console.WriteLine($"Decimal: {sb1}");
+            Console.WriteLine("ASCII value: " + (char)sb1);
+            Console.WriteLine("ASCII value: " + (char)sb2);
+            Console.WriteLine($"Byte min value: {sbyte.MinValue} Byte Max value {sbyte.MaxValue}"); 
+            Console.WriteLine(sizeof(sbyte));
             Console.ReadKey();
         }
     }
