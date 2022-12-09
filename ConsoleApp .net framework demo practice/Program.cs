@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,14 +11,36 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            float a = 1.78986380830029492956829698978655434342477F;
-            double b = 1.78986380830029492956829698978655434342477;
-            decimal c = 1.78986380830029492956829698978655434342477M;
+            Stopwatch stopwatch1 = new Stopwatch();
+            stopwatch1.Start();
+            for (int i = 0; i <= 10000000; i++)
+            {
+                short s1 = 100;
+                short s2 = 100;
+                short s3 = 100;
+            }
+            stopwatch1.Stop();
+            Console.WriteLine(stopwatch1.ElapsedMilliseconds);
 
-            Console.WriteLine(a);
-            Console.WriteLine(b);
-            Console.WriteLine(c);
+            Stopwatch stopwatch2 = new Stopwatch();
+            stopwatch2.Start();
+            for (int i = 0; i <= 10000000; i++)
+            {
+                decimal s1 = 100;
+                decimal s2 = 100;
+                decimal s3 = 100;
+            }
+            stopwatch2.Stop();
+            Console.WriteLine(stopwatch2.ElapsedMilliseconds);
             Console.ReadKey();
+            //float a = 1.78986380830029492956829698978655434342477F;
+            //double b = 1.78986380830029492956829698978655434342477;
+            //decimal c = 1.78986380830029492956829698978655434342477M;
+
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+            //Console.WriteLine(c);
+            //Console.ReadKey();
             //float a = 1.123F;
             //double b = 1.456;
             //decimal c = 1.789M;
