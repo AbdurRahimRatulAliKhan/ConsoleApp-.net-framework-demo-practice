@@ -11,14 +11,22 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"default byte: {default(byte)}");
-            Console.WriteLine($"default int: {default(int)}");
-            Console.WriteLine($"default float: {default(float)}");
-            Console.WriteLine($"default long: {default(long)}");
-            Console.WriteLine($"default double: {default(double)}");
-            Console.WriteLine($"default char: {default(char)}");
-            Console.WriteLine($"default bool: {default(bool)}");
-            Console.ReadKey();
+            unsafe
+            {
+                int number = 10;
+                int* ptr = &number;
+                Console.WriteLine(number);
+                Console.WriteLine((int)ptr);
+                Console.ReadKey();
+            }
+            //Console.WriteLine($"default byte: {default(byte)}");
+            //Console.WriteLine($"default int: {default(int)}");
+            //Console.WriteLine($"default float: {default(float)}");
+            //Console.WriteLine($"default long: {default(long)}");
+            //Console.WriteLine($"default double: {default(double)}");
+            //Console.WriteLine($"default char: {default(char)}");
+            //Console.WriteLine($"default bool: {default(bool)}");
+            //Console.ReadKey();
             //Console.WriteLine($"byte: {sizeof(byte)}");
             //Console.WriteLine($"int: {sizeof(int)}");
             //Console.WriteLine($"char: {sizeof(char)}");
