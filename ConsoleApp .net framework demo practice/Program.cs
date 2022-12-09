@@ -11,14 +11,22 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine($"byte: {sizeof(byte)}");
-            Console.WriteLine($"int: {sizeof(int)}");
-            Console.WriteLine($"char: {sizeof(char)}");
-            Console.WriteLine($"float: {sizeof(float)}");
-            Console.WriteLine($"long: {sizeof(long)}");
-            Console.WriteLine($"double: {sizeof(double)}");
-            Console.WriteLine($"bool: {sizeof(bool)}");
+            Console.WriteLine($"default byte: {default(byte)}");
+            Console.WriteLine($"default int: {default(int)}");
+            Console.WriteLine($"default float: {default(float)}");
+            Console.WriteLine($"default long: {default(long)}");
+            Console.WriteLine($"default double: {default(double)}");
+            Console.WriteLine($"default char: {default(char)}");
+            Console.WriteLine($"default bool: {default(bool)}");
             Console.ReadKey();
+            //Console.WriteLine($"byte: {sizeof(byte)}");
+            //Console.WriteLine($"int: {sizeof(int)}");
+            //Console.WriteLine($"char: {sizeof(char)}");
+            //Console.WriteLine($"float: {sizeof(float)}");
+            //Console.WriteLine($"long: {sizeof(long)}");
+            //Console.WriteLine($"double: {sizeof(double)}");
+            //Console.WriteLine($"bool: {sizeof(bool)}");
+            //Console.ReadKey();
             //Stopwatch stopwatch1 = new Stopwatch();
             //stopwatch1.Start();
             //for (int i = 0; i <= 10000000; i++)
