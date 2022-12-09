@@ -10,20 +10,28 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            float a = 1.123F;
-            double b = 1.456;
-            decimal c = 1.789M;
+            float a = 1.78986380830029492956829698978655434342477F;
+            double b = 1.78986380830029492956829698978655434342477;
+            decimal c = 1.78986380830029492956829698978655434342477M;
 
-            Console.WriteLine($"Size: {sizeof(float)} " +
-                $"Max: {float.MaxValue} " +
-                $"Min: {float.MinValue}");
-            Console.WriteLine($"Size: {sizeof(double)} " +
-                $"Max: {double.MaxValue} " +
-                $"Min: {double.MinValue}");
-            Console.WriteLine($"Size: {sizeof(decimal)} " +
-                $"Max: {decimal.MaxValue} " +
-                $"Min: {decimal.MinValue}");
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+            Console.WriteLine(c);
             Console.ReadKey();
+            //float a = 1.123F;
+            //double b = 1.456;
+            //decimal c = 1.789M;
+
+            //Console.WriteLine($"Size: {sizeof(float)} " +
+            //    $"Max: {float.MaxValue} " +
+            //    $"Min: {float.MinValue}");
+            //Console.WriteLine($"Size: {sizeof(double)} " +
+            //    $"Max: {double.MaxValue} " +
+            //    $"Min: {double.MinValue}");
+            //Console.WriteLine($"Size: {sizeof(decimal)} " +
+            //    $"Max: {decimal.MaxValue} " +
+            //    $"Min: {decimal.MinValue}");
+            //Console.ReadKey();
 
             //Single a = 1.123F;
             //Double b = 1.456;
