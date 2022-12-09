@@ -10,21 +10,36 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Single a = 1.123F;
-            Double b = 1.456;
-            Decimal c = 1.789M;
+            float a = 1.123F;
+            double b = 1.456;
+            decimal c = 1.789M;
 
-            Console.WriteLine($"Size: {sizeof(Single)} " +
-                $"Max: {Single.MaxValue} " +
-                $"Min: {Single.MinValue}");
-            Console.WriteLine($"Size: {sizeof(Double)} " +
-                $"Max: {Double.MaxValue} " +
-                $"Min: {Double.MinValue}");
-            Console.WriteLine($"Size: {sizeof(Decimal)} " +
-                $"Max: {Decimal.MaxValue} " +
-                $"Min: {Decimal.MinValue}");
+            Console.WriteLine($"Size: {sizeof(float)} " +
+                $"Max: {float.MaxValue} " +
+                $"Min: {float.MinValue}");
+            Console.WriteLine($"Size: {sizeof(double)} " +
+                $"Max: {double.MaxValue} " +
+                $"Min: {double.MinValue}");
+            Console.WriteLine($"Size: {sizeof(decimal)} " +
+                $"Max: {decimal.MaxValue} " +
+                $"Min: {decimal.MinValue}");
             Console.ReadKey();
-                                   //            Int16 num1 = 123;
+
+            //Single a = 1.123F;
+            //Double b = 1.456;
+            //Decimal c = 1.789M;
+
+            //Console.WriteLine($"Size: {sizeof(Single)} " +
+            //    $"Max: {Single.MaxValue} " +
+            //    $"Min: {Single.MinValue}");
+            //Console.WriteLine($"Size: {sizeof(Double)} " +
+            //    $"Max: {Double.MaxValue} " +
+            //    $"Min: {Double.MinValue}");
+            //Console.WriteLine($"Size: {sizeof(Decimal)} " +
+            //    $"Max: {Decimal.MaxValue} " +
+            //    $"Min: {Decimal.MinValue}");
+            //Console.ReadKey();
+            //            Int16 num1 = 123;
             //ushort num1 = 123;    // 2 bytes
             //                     //            Int32 num2 = 456;
             //uint num2 = 456;    // 4 bytes
