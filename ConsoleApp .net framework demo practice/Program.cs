@@ -11,18 +11,34 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Calculator calculator = new Calculator();
-            int result = calculator.CalculateSum(10, 20);
-            Console.WriteLine(result);
+            Test test = new Test();
+            Console.WriteLine($"i: {test.i}");
+            Console.WriteLine($"b: {test.b}");
+//            Console.WriteLine(test.s);
+            if(test.s == null)
+            {
+                Console.WriteLine($"s: Null");
+            }
             Console.ReadKey();
+            //Calculator calculator = new Calculator();
+            //int result = calculator.CalculateSum(10, 20);
+            //Console.WriteLine(result);
+            //Console.ReadKey();
         }
 
-        public class Calculator
+        class Test
         {
-            public int CalculateSum(int no1, int no2)
-            {
-                return no1 + no2;
-            }
+            public int i;
+            public bool b;
+            public string s;
         }
+        //public class Calculator
+        //{
+        //    public int CalculateSum(int no1, int no2)
+        //    {
+        //        return no1 + no2;
+        //    }
+        //}
+
     }
 }
