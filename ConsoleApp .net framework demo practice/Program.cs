@@ -9,9 +9,9 @@ namespace ConsoleApp.net_framework_demo_practice
 {
     class Program
     {
-        static Program()
+        private Program()
         {
-            Console.WriteLine("static constructor");
+            Console.WriteLine("private constructor");
         }
         static void Main(string[] args)
         {
