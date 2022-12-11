@@ -25,6 +25,7 @@ namespace ConsoleApp.net_framework_demo_practice
             int x;
             public ParameterizedConstructor(int i)
             {
+                x = i;
                 Console.WriteLine($"Parameterized Constructor  " +
                     $"is called: {i}");
             }
