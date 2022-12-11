@@ -13,17 +13,24 @@ namespace ConsoleApp.net_framework_demo_practice
         {
             ParameterizedConstructor parameterizedConstructor1 = 
                 new ParameterizedConstructor(10);
+            parameterizedConstructor1.Display();
             ParameterizedConstructor parameterizedConstructor2 =
                 new ParameterizedConstructor(20);
+            parameterizedConstructor2.Display();
             Console.ReadKey();
         }
 
         class ParameterizedConstructor
         {
+            int x;
             public ParameterizedConstructor(int i)
             {
                 Console.WriteLine($"Parameterized Constructor  " +
                     $"is called: {i}");
+            }
+            public void Display()
+            {
+                Console.WriteLine($"Value of X is: {x}");
             }
         }
         
