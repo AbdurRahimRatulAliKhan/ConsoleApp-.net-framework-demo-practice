@@ -10,43 +10,38 @@ using System.Xml.Linq;
 namespace ConsoleApp.net_framework_demo_practice
 {
     /// <summary>
-    /// 
+    /// initial class
     /// </summary>
-    class Employee
+    class Example
     {
-        public int Id, Age;
-        public string Address, Name;
-        public bool IsPermanent;
+        int i;
+        static int j;
 
         /// <summary>
-        /// 
+        /// Default constructor
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="age"></param>
-        /// <param name="address"></param>
-        /// <param name="name"></param>
-        /// <param name="isPermanent"></param>
-        public Employee(int id, int age, string address, string name, 
-            bool isPermanent)
+        public Example()
         {
-            Id = id;
-            Age = age;
-            Address = address;
-            Name = name;
-            IsPermanent = isPermanent;
+            Console.WriteLine($"Default constructor executed!");
+            i = 100;
         }
 
         /// <summary>
-        /// 
+        /// static constructor
         /// </summary>
-        /// <param name="FromAquaculture"></param>
-        public Employee(Employee FromAquaculture)
+        static Example()
         {
-            Id = FromAquaculture.Id;
-            Age = FromAquaculture.Age;
-            Address = FromAquaculture.Address;
-            Name = FromAquaculture.Name;
-            IsPermanent = FromAquaculture.IsPermanent;
+            Console.WriteLine($"static constructor executed!");
+            j = 200;
+        }
+
+        /// <summary>
+        /// increment operations for i and static j
+        /// </summary>
+        public void Increment()
+        {
+            i++;
+            j++;
         }
 
         /// <summary>
@@ -54,39 +49,36 @@ namespace ConsoleApp.net_framework_demo_practice
         /// </summary>
         public void Display()
         {
-            Console.WriteLine($"Id: {Id}");
-            Console.WriteLine($"Age: {Age}");
-            Console.WriteLine($"Address: {Address}");
-            Console.WriteLine($"Name: {Name}");
-            Console.WriteLine($"IsPermanent: {IsPermanent}");
+            Console.WriteLine($"i: {i} j: {j}");
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     class Program
     {
-
         /// <summary>
         /// 
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Console.WriteLine("Dept. of GYM");
-            Employee GYM = new Employee(110111, 30, 
-                "CL(USA)", "Amir", true);
-            GYM.Display();
+            Example example = new Example();
+            example.Increment();
+            example.Display();
+            example.Increment();
+            example.Display();
             Console.WriteLine();
 
-            Console.WriteLine("Dept. of Ranch");
-            Employee ranch = new Employee(110222, 40,
-                "Canada", "John", false);
-            ranch.Display();
+            Example example2 = new Example();
+            example2.Increment();
+            example2.Display();
+            example2.Increment();
+            example2.Display();
             Console.WriteLine();
-
-            Console.WriteLine("Dept. of Aquaculture");
-            Employee Aquaculture = new Employee(GYM);
-            Aquaculture.Display();
             Console.ReadKey();
+
         }
     }
 }
