@@ -19,7 +19,7 @@ namespace ConsoleApp.net_framework_demo_practice
         }
     }
 
-    public class Parent
+    public sealed class Parent
     {
         private Parent()
         {
