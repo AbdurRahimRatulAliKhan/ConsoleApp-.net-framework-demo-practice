@@ -13,32 +13,22 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Parent.Child1 child1 = new Parent.Child1();
-            Parent.Child2 child2 = new Parent.Child2();
+            Parent parent = new Parent();
             Console.ReadKey();
         }
     }
 
-    public sealed class Parent
+    public static class Parent
     {
-        private Parent()
+        public static double PI = 3.14;
+        public static int GetSquare(int x)
         {
-            Console.WriteLine("parent class private constructor");
+            return (x * x);
         }
-        public class Child1 : Parent
-        {
-            public Child1()
-            {
-                Console.WriteLine("child1 class public constructor");
-            }
-        }
-        public class Child2 : Parent
-        {
-            public Child2()
-            {
-                Console.WriteLine("child2 class public constructor");
-            }
-        }
+    }
+    public class Child : Parent
+    {
+
     }
     
 }
