@@ -11,20 +11,19 @@ namespace ConsoleApp.net_framework_demo_practice
 {
     class Program
     {
+        private Program()
+        {
+            Console.WriteLine("Private parameterless constructor");
+        }
+        private Program(string message)
+        {
+            Console.WriteLine("Private parameterized constructor");
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine($"PI: {Parent.PI}");
-            Console.WriteLine($"GetSquare: {Parent.GetSquare(5)}");
-            Console.ReadKey();
-        }
-    }
-
-    public static class Parent
-    {
-        public static double PI = 3.14;
-        public static int GetSquare(int x)
-        {
-            return (x * x);
+            Program program1 = new Program();
+            Program program2 = new Program("Hi");
+            Console.ReadKey(true);
         }
     }
     
