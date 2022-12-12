@@ -11,29 +11,19 @@ namespace ConsoleApp.net_framework_demo_practice
 {
     class Program
     {
+        private Program()
+        {
+            Console.WriteLine("Private Constructor");
+        }
+        public void Method1()
+        {
+            Console.WriteLine("Method1 is called!");
+        }
         static void Main(string[] args)
         {
-            Console.WriteLine("Main method started!");
-            ConstructorDemo constructorDemo = new ConstructorDemo();
-            Console.WriteLine(constructorDemo.y);
-            Console.WriteLine("Main method completed!");
+            Program program = new Program();
+            program.Method1();
             Console.ReadKey();
-        }
-    }
-
-    public class ConstructorDemo
-    {
-        public static int x;
-        public int y;
-
-        static ConstructorDemo()
-        {
-            Console.WriteLine("Static Constructor is called!");
-        }
-
-        public ConstructorDemo()
-        {
-            Console.WriteLine("Non-Static Constructor is called!");
         }
     }
 }
