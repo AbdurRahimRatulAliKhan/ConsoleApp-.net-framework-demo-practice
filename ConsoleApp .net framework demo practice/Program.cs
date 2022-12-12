@@ -15,6 +15,7 @@ namespace ConsoleApp.net_framework_demo_practice
         {
             Console.WriteLine("Main method started!");
             ConstructorDemo constructorDemo = new ConstructorDemo();
+            Console.WriteLine(constructorDemo.y);
             Console.WriteLine("Main method completed!");
             Console.ReadKey();
         }
@@ -22,8 +23,8 @@ namespace ConsoleApp.net_framework_demo_practice
 
     public class ConstructorDemo
     {
-        static int x;
-        int y;
+        public static int x;
+        public int y;
 
         static ConstructorDemo()
         {
