@@ -9,76 +9,30 @@ using System.Xml.Linq;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
-    /// <summary>
-    /// initial class
-    /// </summary>
-    class Example
+    class Program
     {
-        int i;
-        static int j;
-
-        /// <summary>
-        /// Default constructor
-        /// </summary>
-        public Example()
+        static void Main(string[] args)
         {
-            Console.WriteLine($"Default constructor executed!");
-            i = 100;
-        }
-
-        /// <summary>
-        /// static constructor
-        /// </summary>
-        static Example()
-        {
-            Console.WriteLine($"static constructor executed!");
-            j = 200;
-        }
-
-        /// <summary>
-        /// increment operations for i and static j
-        /// </summary>
-        public void Increment()
-        {
-            i++;
-            j++;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public void Display()
-        {
-            Console.WriteLine($"i: {i} j: {j}");
+            Console.WriteLine("Main method started!");
+            ConstructorDemo constructorDemo = new ConstructorDemo();
+            Console.WriteLine("Main method completed!");
+            Console.ReadKey();
         }
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    class Program
+    public class ConstructorDemo
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="args"></param>
-        static void Main(string[] args)
+        static int x;
+        int y;
+
+        static ConstructorDemo()
         {
-            Example example = new Example();
-            example.Increment();
-            example.Display();
-            example.Increment();
-            example.Display();
-            Console.WriteLine();
+            Console.WriteLine("Static Constructor is called!");
+        }
 
-            Example example2 = new Example();
-            example2.Increment();
-            example2.Display();
-            example2.Increment();
-            example2.Display();
-            Console.WriteLine();
-            Console.ReadKey();
-
+        public ConstructorDemo()
+        {
+            Console.WriteLine("Non-Static Constructor is called!");
         }
     }
 }
