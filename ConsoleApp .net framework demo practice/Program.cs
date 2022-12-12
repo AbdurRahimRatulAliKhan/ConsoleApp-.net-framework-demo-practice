@@ -13,32 +13,27 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Test test = new Test(10);
-            test.Method1();
-            Console.ReadKey();
+            Child child = new Child();  
+            Console.ReadKey(true);
         }
     }
 
-    public class Test
+    public class Parent
     {
-        /// <summary>
-        /// private constructor
-        /// </summary>
-        private Test()
+        private Parent()
         {
-            Console.WriteLine("Private constructor");
+            Console.WriteLine("parent calss private constructor");
         }
-        /// <summary>
-        /// public constructor
-        /// </summary>
-        /// <param name="x"></param>
-        public Test(int x)
+        public Parent(string message)
         {
-            Console.WriteLine("Public constructor");
+            Console.WriteLine("parent calss public constructor");
         }
-        public void Method1() 
+    }
+    public class Child : Parent
+    {
+        public Child() : base("Hi")
         {
-            Console.WriteLine("Method1");
+            Console.WriteLine("child class public constructor");
         }
     }
 }
