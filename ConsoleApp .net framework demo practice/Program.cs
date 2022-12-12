@@ -13,7 +13,7 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Child child = new Child();  
+            Parent.Child child = new Parent.Child();  
             Console.ReadKey(true);
         }
     }
@@ -24,16 +24,15 @@ namespace ConsoleApp.net_framework_demo_practice
         {
             Console.WriteLine("parent calss private constructor");
         }
-        public Parent(string message)
+        
+
+        public class Child : Parent
         {
-            Console.WriteLine("parent calss public constructor");
+            public Child()
+            {
+                Console.WriteLine("child class public constructor");
+            }
         }
     }
-    public class Child : Parent
-    {
-        public Child() : base("Hi")
-        {
-            Console.WriteLine("child class public constructor");
-        }
-    }
+    
 }
