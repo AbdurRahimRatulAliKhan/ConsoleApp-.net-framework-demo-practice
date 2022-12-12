@@ -13,7 +13,8 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
-            Parent parent = new Parent();
+            Console.WriteLine($"PI: {Parent.PI}");
+            Console.WriteLine($"GetSquare: {Parent.GetSquare(5)}");
             Console.ReadKey();
         }
     }
@@ -25,10 +26,6 @@ namespace ConsoleApp.net_framework_demo_practice
         {
             return (x * x);
         }
-    }
-    public class Child : Parent
-    {
-
     }
     
 }
