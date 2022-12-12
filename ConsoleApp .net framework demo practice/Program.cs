@@ -11,19 +11,34 @@ namespace ConsoleApp.net_framework_demo_practice
 {
     class Program
     {
-        private Program()
-        {
-            Console.WriteLine("Private Constructor");
-        }
-        public void Method1()
-        {
-            Console.WriteLine("Method1 is called!");
-        }
         static void Main(string[] args)
         {
-            Program program = new Program();
-            program.Method1();
+            Test test = new Test(10);
+            test.Method1();
             Console.ReadKey();
+        }
+    }
+
+    public class Test
+    {
+        /// <summary>
+        /// private constructor
+        /// </summary>
+        private Test()
+        {
+            Console.WriteLine("Private constructor");
+        }
+        /// <summary>
+        /// public constructor
+        /// </summary>
+        /// <param name="x"></param>
+        public Test(int x)
+        {
+            Console.WriteLine("Public constructor");
+        }
+        public void Method1() 
+        {
+            Console.WriteLine("Method1");
         }
     }
 }
