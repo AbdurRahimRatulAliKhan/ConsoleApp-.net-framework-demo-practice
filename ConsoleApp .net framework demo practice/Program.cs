@@ -31,6 +31,7 @@ namespace ConsoleApp.net_framework_demo_practice
             DestructorDemo destructorDemo2 = new DestructorDemo();
 
             destructorDemo1 = null;
+//            destructorDemo2 = null;
             GC.Collect();
             Console.ReadKey();
         }
