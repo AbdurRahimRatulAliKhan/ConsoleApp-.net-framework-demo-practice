@@ -9,45 +9,30 @@ using System.Xml.Linq;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
+    class DestructorDemo
+    {
+        public DestructorDemo()
+        {
+            Console.WriteLine("Constructor Object Created");
+        }
+        ~DestructorDemo()
+        {
+            //            string type = GetType().Name;
+            string type = GetType().Name;
+            Console.WriteLine($"Object {type} type is Destroyed");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Singleton singleton1 = Singleton.GetSingletonInstance();
-            singleton1.SomeMethod("from singleton1");
-            Singleton singleton2 = Singleton.GetSingletonInstance();
-            singleton2.SomeMethod("from singleton2");
+            DestructorDemo destructorDemo1 = new DestructorDemo();
+            DestructorDemo destructorDemo2 = new DestructorDemo();
+
+            destructorDemo1 = null;
+            GC.Collect();
             Console.ReadKey();
         }
     }
-
-    public sealed class Singleton
-    {
-        private static int counter = 0;
-        private static Singleton instance = null;
-        
-        private static readonly object Instancelock = new object();
-        
-        public static Singleton GetSingletonInstance()
-        {
-            lock (Instancelock)
-            {
-                if (instance == null)
-                {
-                    instance = new Singleton();
-                }
-                return instance;
-            }
-        }
-        private Singleton()
-        {
-            counter++;
-            Console.WriteLine($"singleton constructor executed {counter} times");
-        }
-        public void SomeMethod(string Message)
-        {
-            Console.WriteLine($"somemethod called {Message}");
-        }
-    }
-    
 }
