@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
@@ -13,13 +6,11 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         public DestructorDemo()
         {
-            Console.WriteLine("Constructor Object Created");
+            Console.WriteLine("DestructorDemo Object Created");
         }
         ~DestructorDemo()
         {
-            //            string type = GetType().Name;
-            string type = GetType().Name;
-            Console.WriteLine($"Object {type} type is Destroyed");
+            Console.WriteLine($"DestructorDemo Object Destroyed");
         }
     }
 
@@ -27,12 +18,18 @@ namespace ConsoleApp.net_framework_demo_practice
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Main Method Execution started");
             DestructorDemo destructorDemo1 = new DestructorDemo();
-            DestructorDemo destructorDemo2 = new DestructorDemo();
+            destructorDemo1 = null;
+            GC.Collect();
+            Console.WriteLine("some statement executed inside main method");
 
             destructorDemo1 = null;
-//            destructorDemo2 = null;
             GC.Collect();
+            Console.WriteLine("some more statement executed inside main method");
+
+            GC.Collect();
+            Console.WriteLine("Main method execution end");
             Console.ReadKey();
         }
     }
