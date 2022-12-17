@@ -5,7 +5,8 @@ namespace ConsoleApp.net_framework_demo_practice
     public class UnmanagedResource : IDisposable
     {
         #region IDisposable Support
-        private bool disposedValue = false;
+//        private bool disposedValue = false;
+        private bool disposedValue;
 
         protected virtual void Dispose(bool disposing)
         {
@@ -14,17 +15,17 @@ namespace ConsoleApp.net_framework_demo_practice
                 if (disposing)
                 {
                     // TODO: dispose managed state (managed objects)
-                    Console.WriteLine("Managed resoucrces destroyed by disposed method");
+                    Console.WriteLine("4: Managed resoucrces destroyed by disposed method");
                 }
 
                 // TODO: free unmanaged resources (unmanaged objects) and override finalizer
                 // TODO: set large fields to null
-                Console.WriteLine("unmanaged resources destroyed by dispose method");
+                Console.WriteLine("5: unmanaged resources destroyed by dispose method");
                 disposedValue = true;
             }
             else
             {
-                Console.WriteLine("resources are already destroyed by dispose method");
+                Console.WriteLine("7: resources are already destroyed by dispose method");
             }
         }
 
@@ -38,35 +39,36 @@ namespace ConsoleApp.net_framework_demo_practice
 
         public void Dispose()
         {
+            Console.WriteLine("3: request comes to dispose method to destroy the resources");
             // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
             Dispose(disposing: true);
+//            GC.Collect();
             GC.SuppressFinalize(this);
         }
         #endregion
     }
-
     class Program
     {
-//        static void Main(string[] args)
-        static void Main()
+        static void Main(string[] args)
+//        static void Main()
         {
             UnmanagedResource unmanagedResource = null;
             try
             {
-                unmanagedResource= new UnmanagedResource();
-                Console.WriteLine("using resources");
+                unmanagedResource = new UnmanagedResource();
+                Console.WriteLine("1: using resources");
             }
             finally
             {
                 if (unmanagedResource != null)
                 {
-                    Console.WriteLine("calling dispose method to destroy resources");
+                    Console.WriteLine("2: calling dispose method to destroy resources");
                     unmanagedResource.Dispose();
                 }
             }
 
             Console.WriteLine();
-            Console.WriteLine("trying to call the dispose method again to destroy resources");
+            Console.WriteLine("6: trying to call the dispose method again to destroy resources");
             unmanagedResource.Dispose();
             Console.ReadKey();
         }
