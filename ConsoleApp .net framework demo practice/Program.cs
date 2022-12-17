@@ -2,34 +2,34 @@
 
 namespace ConsoleApp.net_framework_demo_practice
 {
-    class DestructorDemo
+    public class DestructorDemo
     {
-        public DestructorDemo()
-        {
-            Console.WriteLine("DestructorDemo Object Created");
-        }
         ~DestructorDemo()
         {
-            Console.WriteLine($"DestructorDemo Object Destroyed");
+            Console.WriteLine("Destructor of 1st called");
         }
     }
-
+    public class DestructorDemo2 : DestructorDemo
+    {
+        ~DestructorDemo2()
+        {
+            Console.WriteLine("Destructor of 2nd called");
+        }
+    }
+    public class DestructorDemo3 : DestructorDemo2
+    {
+        ~DestructorDemo3()
+        {
+            Console.WriteLine("Destructor of 3rd called");
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Main Method Execution started");
-            DestructorDemo destructorDemo1 = new DestructorDemo();
-            destructorDemo1 = null;
+            DestructorDemo3 destructorDemo3 = new DestructorDemo3();
+            destructorDemo3 = null;
             GC.Collect();
-            Console.WriteLine("some statement executed inside main method");
-
-            destructorDemo1 = null;
-            GC.Collect();
-            Console.WriteLine("some more statement executed inside main method");
-
-            GC.Collect();
-            Console.WriteLine("Main method execution end");
             Console.ReadKey();
         }
     }
