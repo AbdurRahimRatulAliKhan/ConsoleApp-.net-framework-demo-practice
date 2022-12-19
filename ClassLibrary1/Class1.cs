@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace ClassLibrary1
 {
 //    public class ClassLibrary1Class1
-    internal class ClassLibrary1Class1
+//    internal class ClassLibrary1Class1
+    public class ClassLibrary1Class1
     {
 //        private int Id;
         public int Id;
