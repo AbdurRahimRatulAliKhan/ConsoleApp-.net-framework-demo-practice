@@ -9,7 +9,8 @@ namespace ClassLibrary1
     public class ClassLibrary1Class1
     {
 //        private int Id;
-        public int Id;
+//        public int Id;
+        protected int Id;
         public void Display1()
         {
             Console.WriteLine(Id);
