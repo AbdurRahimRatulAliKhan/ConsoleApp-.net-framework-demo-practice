@@ -12,7 +12,8 @@ namespace ClassLibrary1
 //        public int Id;
 //        protected int Id;
 //        internal int Id;
-        protected internal int Id;
+//        protected internal int Id;
+        private protected int Id;
         public void Display1()
         {
             Console.WriteLine(Id);
