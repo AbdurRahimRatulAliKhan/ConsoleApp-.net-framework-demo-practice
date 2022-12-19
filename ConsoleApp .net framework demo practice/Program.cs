@@ -3,28 +3,51 @@ using System;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
+    class Bank
+    {
+        public long AccountNumber;
+        public string Name;
+        public int Balance;
+
+        public void GetBalance()
+        {
+
+        }
+        public void WithdrawAmount()
+        {
+
+        }
+        public void Deposit()
+        {
+
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            
+            Bank bank = new Bank();
+            bank.AccountNumber = 12345678;
+            bank.Name = "Pranka";
+            bank.GetBalance();
+            bank.WithdrawAmount();
         }
     }
-    public class AnotherClassLibrary1Class1 : ClassLibrary1Class1
-    {
-        public void Display4()
-        {
-            Console.WriteLine(Id);
-        }
-    }
-    public class AnotherClassLibrary1Class2
-    {
-        public void Display3()
-        {
-            ClassLibrary1Class1 classLibrary1Class1 = new ClassLibrary1Class1();
-            Console.WriteLine(classLibrary1Class1.Id);
-        }
-    }
+    //public class AnotherClassLibrary1Class1 : ClassLibrary1Class1
+    //{
+    //    public void Display4()
+    //    {
+    //        Console.WriteLine(Id);
+    //    }
+    //}
+    //public class AnotherClassLibrary1Class2
+    //{
+    //    public void Display3()
+    //    {
+    //        ClassLibrary1Class1 classLibrary1Class1 = new ClassLibrary1Class1();
+    //        Console.WriteLine(classLibrary1Class1.Id);
+    //    }
+    //}
     //public class MyClass2 : IDisposable
     //{
     //    #region IDisposable Support for class2
