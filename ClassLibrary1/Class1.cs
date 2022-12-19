@@ -6,27 +6,30 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
-    public class ClassLibrary1Class1
+//    public class ClassLibrary1Class1
+    internal class ClassLibrary1Class1
     {
 //        private int Id;
-//        public int Id;
+        public int Id;
 //        protected int Id;
 //        internal int Id;
 //        protected internal int Id;
-        private protected int Id;
+//        private protected int Id;
         public void Display1()
         {
             Console.WriteLine(Id);
         }
     }
-    public class ClassLibrary1Class2 : ClassLibrary1Class1
+//    public class ClassLibrary1Class2 : ClassLibrary1Class1
+    internal class ClassLibrary1Class2 : ClassLibrary1Class1
     {
         public void Display2()
         {
             Console.WriteLine(Id);
         }
     }
-    public class ClassLibrary1Class3
+    //    public class ClassLibrary1Class3
+    internal class ClassLibrary1Class3
     {
         public void Display3()
         {
