@@ -30,7 +30,7 @@ namespace ConsoleApp.net_framework_demo_practice
             bank.AccountNumber = 12345678;
             bank.Name = "Pranka";
             bank.GetBalance();
-            bank.WithdrawAmount();
+//            bank.WithdrawAmount();
         }
     }
     //public class AnotherClassLibrary1Class1 : ClassLibrary1Class1
