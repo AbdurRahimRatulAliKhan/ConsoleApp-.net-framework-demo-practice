@@ -3,34 +3,43 @@ using System;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
-    class Bank
+    public class Bank
     {
-        public long AccountNumber;
-        public string Name;
-        public int Balance;
+        //public long AccountNumber;
+        //public string Name;
+        //public int Balance;
 
-        public void GetBalance()
+        private double balance;
+
+        public double GetBalance()
         {
-
+            return balance;
         }
-        public void WithdrawAmount()
+        public void SetBalance( double balance)
         {
-
+            this.balance = balance;
         }
-        public void Deposit()
-        {
+        //public void WithdrawAmount()
+        //{
 
-        }
+        //}
+        //public void Deposit()
+        //{
+
+        //}
     }
     class Program
     {
         static void Main(string[] args)
         {
             Bank bank = new Bank();
-            bank.AccountNumber = 12345678;
-            bank.Name = "Pranka";
-            bank.GetBalance();
-//            bank.WithdrawAmount();
+            bank.SetBalance(500);
+            Console.WriteLine(bank.GetBalance());
+            Console.ReadKey();
+            //bank.AccountNumber = 12345678;
+            //bank.Name = "Pranka";
+            //bank.GetBalance();
+            //bank.WithdrawAmount();
         }
     }
     //public class AnotherClassLibrary1Class1 : ClassLibrary1Class1
