@@ -5,41 +5,41 @@ namespace ConsoleApp.net_framework_demo_practice
 {
     public class Bank
     {
-        private int Amount;
-        public int GetAmount()
+        private double _Amount;
+        public double Amount
         {
-            return Amount;
-        }
-        public void SetAmount(int Amount)
-        {
-            if (Amount > 0)
+            get
             {
-                this.Amount = Amount;
+                return _Amount;
             }
-            else
+            set
             {
-                throw new Exception("Please pass a positive value");
-                //Console.WriteLine("Please pass a positive value");
+                    if (value < 0)
+                    {
+                        throw new Exception("Please pass a positive value");
+                    }
+                    else
+                    {
+                        _Amount = value;
+                    }
             }
         }
+        
     }
     class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             try
             {
                 Bank bank = new Bank();
-                bank.SetAmount(10);
-                Console.WriteLine(bank.GetAmount());
-
-                bank.SetAmount(-150);
-                Console.WriteLine(bank.GetAmount());
+                bank.Amount = 10;
+                Console.WriteLine(bank.Amount);
+                bank.Amount = -150;
+                Console.WriteLine(bank.Amount);
             }
             catch (Exception ex)
             {
-
-//                Console.WriteLine(ex.ToString());
                 Console.WriteLine(ex.Message);
             }
             Console.ReadKey();
