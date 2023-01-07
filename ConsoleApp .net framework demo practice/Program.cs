@@ -42,7 +42,7 @@ namespace ConsoleApp.net_framework_demo_practice
             {
                 Console.WriteLine(ex.Message);
             }
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }
