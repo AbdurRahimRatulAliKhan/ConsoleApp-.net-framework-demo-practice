@@ -3,46 +3,84 @@ using System;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
-    public class Bank
+    public class SBI
     {
-        private double _Amount;
-        public double Amount
+        public void BankTransfer()
         {
-            get
-            {
-                return _Amount;
-            }
-            set
-            {
-                    if (value < 0)
-                    {
-                        throw new Exception("Please pass a positive value");
-                    }
-                    else
-                    {
-                        _Amount = value;
-                    }
-            }
+            Console.WriteLine("SBI Bank Bank Transfer");
         }
-        
+
+        public void CheckBalance()
+        {
+            Console.WriteLine("SBI Bank Check Balance");
+        }
+
+        public void MiniStatement()
+        {
+            Console.WriteLine("SBI Bank Mini Statement");
+        }
+
+        public void ValidateCard()
+        {
+            Console.WriteLine("SBI Bank Validate Card");
+        }
+
+        public void WithdrawMoney()
+        {
+            Console.WriteLine("SBI Bank Withdraw Money");
+        }
+    }
+
+    public class AXIX
+    {
+        public void BankTransfer()
+        {
+            Console.WriteLine("AXIX Bank Bank Transfer");
+        }
+
+        public void CheckBalance()
+        {
+            Console.WriteLine("AXIX Bank Check Balance");
+        }
+
+        public void MiniStatement()
+        {
+            Console.WriteLine("AXIX Bank Mini Statement");
+        }
+
+        public void ValidateCard()
+        {
+            Console.WriteLine("AXIX Bank Validate Card");
+        }
+
+        public void WithdrawMoney()
+        {
+            Console.WriteLine("AXIX Bank Withdraw Money");
+        }
     }
     class Program
     {
-        public static void Main()
+        static void Main(string[] args)
         {
-            try
-            {
-                Bank bank = new Bank();
-                bank.Amount = 10;
-                Console.WriteLine(bank.Amount);
-                bank.Amount = -150;
-                Console.WriteLine(bank.Amount);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            //Console.ReadKey();
+            Console.WriteLine("Transaction doing SBI Bank");
+            SBI sBI = new SBI();
+            sBI.ValidateCard();
+            sBI.WithdrawMoney();
+            sBI.CheckBalance();
+            sBI.BankTransfer();
+            sBI.MiniStatement();
+
+            Console.WriteLine("");
+
+            Console.WriteLine("Transaction doing SBI Bank");
+            AXIX aXIX = new AXIX();
+            aXIX.ValidateCard();
+            aXIX.WithdrawMoney();
+            aXIX.CheckBalance();
+            aXIX.BankTransfer();
+            aXIX.MiniStatement();
+
+            Console.Read();
         }
     }
 }
