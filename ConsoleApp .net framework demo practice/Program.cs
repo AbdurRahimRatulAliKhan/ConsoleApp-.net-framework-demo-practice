@@ -3,7 +3,7 @@ using System;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
-    public interface IIBank
+    public interface IBank
     {
         void ValidateCard();
         void WithdrawMoney();
@@ -12,7 +12,24 @@ namespace ConsoleApp.net_framework_demo_practice
         void MiniStatement();
 
     }
-    public class SBI
+
+    public class BankFactory
+    {
+        public static IBank GetBankObject(string bankType)
+        {
+            IBank BankObject = null;
+            if(bankType == "SBI")
+            {
+                BankObject = new SBI();
+            }
+            else if (bankType == "AXIX")
+            {
+                BankObject = new AXIX();
+            }
+            return BankObject;
+        }
+    }
+    public class SBI : IBank
     {
         public void BankTransfer()
         {
@@ -40,7 +57,7 @@ namespace ConsoleApp.net_framework_demo_practice
         }
     }
 
-    public class AXIX
+    public class AXIX : IBank
     {
         public void BankTransfer()
         {
