@@ -3,6 +3,15 @@ using System;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
+    public interface IIBank
+    {
+        void ValidateCard();
+        void WithdrawMoney();
+        void CheckBalance();
+        void BankTransfer();
+        void MiniStatement();
+
+    }
     public class SBI
     {
         public void BankTransfer()
