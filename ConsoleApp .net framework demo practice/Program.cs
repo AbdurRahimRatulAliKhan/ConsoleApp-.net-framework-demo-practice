@@ -3,13 +3,13 @@ using System;
 
 namespace ConsoleApp.net_framework_demo_practice
 {
-    public interface IBank
+    public abstract class IBank
     {
-        void ValidateCard();
-        void WithdrawMoney();
-        void CheckBalance();
-        void BankTransfer();
-        void MiniStatement();
+        public abstract void ValidateCard();
+        public abstract void WithdrawMoney();
+        public abstract void CheckBalance();
+        public abstract void BankTransfer();
+        public abstract void MiniStatement();
 
     }
 
@@ -31,27 +31,27 @@ namespace ConsoleApp.net_framework_demo_practice
     }
     public class SBI : IBank
     {
-        public void BankTransfer()
+        public override void BankTransfer()
         {
             Console.WriteLine("SBI Bank Bank Transfer");
         }
 
-        public void CheckBalance()
+        public override void CheckBalance()
         {
             Console.WriteLine("SBI Bank Check Balance");
         }
 
-        public void MiniStatement()
+        public override void MiniStatement()
         {
             Console.WriteLine("SBI Bank Mini Statement");
         }
 
-        public void ValidateCard()
+        public override void ValidateCard()
         {
             Console.WriteLine("SBI Bank Validate Card");
         }
 
-        public void WithdrawMoney()
+        public override void WithdrawMoney()
         {
             Console.WriteLine("SBI Bank Withdraw Money");
         }
@@ -59,27 +59,27 @@ namespace ConsoleApp.net_framework_demo_practice
 
     public class AXIX : IBank
     {
-        public void BankTransfer()
+        public override void BankTransfer()
         {
             Console.WriteLine("AXIX Bank Bank Transfer");
         }
 
-        public void CheckBalance()
+        public override void CheckBalance()
         {
             Console.WriteLine("AXIX Bank Check Balance");
         }
 
-        public void MiniStatement()
+        public override void MiniStatement()
         {
             Console.WriteLine("AXIX Bank Mini Statement");
         }
 
-        public void ValidateCard()
+        public override void ValidateCard()
         {
             Console.WriteLine("AXIX Bank Validate Card");
         }
 
-        public void WithdrawMoney()
+        public override void WithdrawMoney()
         {
             Console.WriteLine("AXIX Bank Withdraw Money");
         }
@@ -89,7 +89,8 @@ namespace ConsoleApp.net_framework_demo_practice
         static void Main(string[] args)
         {
             Console.WriteLine("Transaction doing SBI Bank");
-            SBI sBI = new SBI();
+            //            SBI sBI = new SBI();
+            IBank sBI = BankFactory.GetBankObject("SBI");
             sBI.ValidateCard();
             sBI.WithdrawMoney();
             sBI.CheckBalance();
@@ -98,8 +99,9 @@ namespace ConsoleApp.net_framework_demo_practice
 
             Console.WriteLine("");
 
-            Console.WriteLine("Transaction doing SBI Bank");
-            AXIX aXIX = new AXIX();
+            Console.WriteLine("Transaction doing AXIX Bank");
+            //            AXIX aXIX = new AXIX();
+            IBank aXIX = BankFactory.GetBankObject("AXIX");
             aXIX.ValidateCard();
             aXIX.WithdrawMoney();
             aXIX.CheckBalance();
