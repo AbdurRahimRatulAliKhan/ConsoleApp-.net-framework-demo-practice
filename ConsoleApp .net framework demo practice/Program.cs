@@ -30,13 +30,18 @@ namespace ConsoleApp.net_framework_demo_practice
         }
         static void Main(string[] args)
         {
-            A variableA; //instanceA is a variable of class A
-            B instanceB = new B(); // instanceB is an instance of class B
-            variableA = instanceB; // now variableA is a reference of parent calss created by using child class instance 
+            A reference; //instanceA is a variable of class A
+            B instance = new B(); // instanceB is an instance of class B
+            reference = instance; // now variableA is a reference of parent calss created by using child class instance 
             //now we can call members of class A as follows
-            variableA.Method1();
-            variableA.Method2();
-//            instanceA.Method3();
+            reference.Method1();
+            reference.Method2();
+
+            Console.WriteLine("");
+            //calling by the instance
+            instance.Method1();
+            instance.Method2();
+            instance.Method3();
             Console.Read();
         }
     }
