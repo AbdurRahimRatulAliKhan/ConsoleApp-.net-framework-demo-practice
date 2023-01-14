@@ -5,9 +5,9 @@ namespace ConsoleApp.net_framework_demo_practice
 {
     class A
     {
-        public A()
+        public A(int number)
         {
-            Console.WriteLine("Class A constructor is called!");
+            Console.WriteLine($"Class A constructor is called! and the value is {number}");
         }
         public void Method1()
         {
@@ -20,7 +20,7 @@ namespace ConsoleApp.net_framework_demo_practice
     }
     class B : A
     {
-        public B()
+        public B() : base(10)
         {
             Console.WriteLine("class program constructor is called!");
         }
@@ -30,16 +30,18 @@ namespace ConsoleApp.net_framework_demo_practice
         }
         static void Main(string[] args)
         {
-            Object obj1 = new Object();
-            Console.WriteLine($"obj1 type: {obj1.GetType()}");
-            
-            Console.WriteLine("");
-            A obj2 = new A();
-            Console.WriteLine($"obj2 type: {obj2.GetType()}");
+            B obj = new B();
 
-            Console.WriteLine("");
-            B obj3 = new B();
-            Console.WriteLine($"obj3 type: {obj3.GetType()}");
+            //Object obj1 = new Object();
+            //Console.WriteLine($"obj1 type: {obj1.GetType()}");
+            
+            //Console.WriteLine("");
+            //A obj2 = new A();
+            //Console.WriteLine($"obj2 type: {obj2.GetType()}");
+
+            //Console.WriteLine("");
+            //B obj3 = new B();
+            //Console.WriteLine($"obj3 type: {obj3.GetType()}");
 
             Console.ReadKey();
         }
