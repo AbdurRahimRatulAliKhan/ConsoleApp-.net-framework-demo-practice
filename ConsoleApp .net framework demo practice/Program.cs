@@ -20,7 +20,7 @@ namespace ConsoleApp.net_framework_demo_practice
     }
     class B : A
     {
-        public B() : base(10)
+        public B(int num) : base(num)
         {
             Console.WriteLine("class program constructor is called!");
         }
@@ -30,7 +30,9 @@ namespace ConsoleApp.net_framework_demo_practice
         }
         static void Main(string[] args)
         {
-            B obj = new B();
+            B obj1 = new B(10);
+            B obj2 = new B(20);
+            B obj3 = new B(30);
 
             //Object obj1 = new Object();
             //Console.WriteLine($"obj1 type: {obj1.GetType()}");
